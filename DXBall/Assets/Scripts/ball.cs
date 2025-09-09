@@ -26,10 +26,20 @@ public class ball_cs : MonoBehaviour
             direction.y = -direction.y;
         }
 
-        if(collision.gameObject.CompareTag("brick"))
+        else if(collision.gameObject.CompareTag("brick"))
         {
             direction.y = -direction.y;
             Destroy(collision.gameObject);
+        }
+
+        else if(collision.gameObject.CompareTag("wall"))
+        {
+            direction.x = -direction.x;
+        }
+
+        else if(collision.gameObject.CompareTag("ceiling"))
+        {
+            direction.y = -direction.y;
         }
     }
 }
