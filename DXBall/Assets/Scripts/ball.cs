@@ -32,14 +32,19 @@ public class ball_cs : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        else if(collision.gameObject.CompareTag("wall"))
+        else if(collision.gameObject.CompareTag("sideWall"))
         {
             direction.x = -direction.x;
         }
 
-        else if(collision.gameObject.CompareTag("ceiling"))
+        else if(collision.gameObject.CompareTag("topWall"))
         {
             direction.y = -direction.y;
+        }
+
+        else if(collision.gameObject.CompareTag("bottomWall"))
+        {
+            Debug.Log("Game over");
         }
     }
 }
