@@ -1447,6 +1447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   ball: {fileID: 544089238}
+  paddlecontroller: {fileID: 311915025}
   scoreText: {fileID: 1553848804}
   winText: {fileID: 1553848804}
 --- !u!1 &817244981

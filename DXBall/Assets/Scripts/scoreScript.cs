@@ -5,6 +5,7 @@ using TMPro;
 public class scoreScript : MonoBehaviour
 {
     public GameObject ball;
+    public GameObject paddlecontroller;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI winText;
     int score = 0;
@@ -20,6 +21,7 @@ public class scoreScript : MonoBehaviour
             {
                 winText.text = "You Win!";
                 ball.SetActive(false);
+                paddlecontroller.SetActive(false);
             }
         }
         else if(input == 0)
