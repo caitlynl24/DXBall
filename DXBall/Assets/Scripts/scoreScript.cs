@@ -23,7 +23,12 @@ public class scoreScript : MonoBehaviour
                 winText.text = "You Win!";
                 ball.SetActive(false);
                 paddlecontroller.SetActive(false);
-                SceneManager.LoadScene("Level2");
+
+                string currentScene = SceneManager.GetActiveScene().name;
+                if(currentScene != "Level2")
+                {
+                    SceneManager.LoadScene("Level2");
+                }
             }
         }
         else if(input == 0)
