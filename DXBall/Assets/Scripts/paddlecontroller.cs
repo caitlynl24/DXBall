@@ -18,12 +18,12 @@ public class paddlecontroller : MonoBehaviour
     void Update()
     {
         if((Input.GetKey(KeyCode.RightArrow))){
-            if(initial.x<=9.75){
+            if(initial.x<=8.25){
                 initial.x=initial.x+displacement;
             }
         }
         else if((Input.GetKey(KeyCode.LeftArrow))){
-            if(initial.x>-9.75){
+            if(initial.x>-8.25){
                 initial.x=initial.x-displacement;
             }
         }
