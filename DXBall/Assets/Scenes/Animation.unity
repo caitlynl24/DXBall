@@ -151,7 +151,7 @@ MonoBehaviour:
   musicSource: {fileID: 268110017}
   sfxSource: {fileID: 718474541}
   backgroundMusic: {fileID: 8300000, guid: 17ef883f1d3a17142b02e7af0cd3ab71, type: 3}
-  stumbleSound: {fileID: 0}
+  stumbleSound: {fileID: 8300000, guid: 369c8b7972fa9344ab378d852830d9d4, type: 3}
 --- !u!4 &85193601
 Transform:
   m_ObjectHideFlags: 0

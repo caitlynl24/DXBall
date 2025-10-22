@@ -8,12 +8,15 @@ public class playerMove : MonoBehaviour
     public float displacement;
 
     public Animator animator;
+
+    SoundManager soundManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         pad = GetComponent<Rigidbody2D>();
         initial = pad.transform.localPosition;
+        soundManager = GameObject.FindGameObjectWithTag("music").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -36,5 +39,14 @@ public class playerMove : MonoBehaviour
         }
 
         pad.MovePosition(initial);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("brick"))
+        {
+            Debug.Log("Stumble Sound");
+            soundManager.PlaySFX(soundManager.stumbleSound);
+        }
     }
 }
